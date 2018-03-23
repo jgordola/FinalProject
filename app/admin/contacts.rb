@@ -1,4 +1,4 @@
-ActiveAdmin.register Product do
+ActiveAdmin.register Contact do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -12,6 +12,6 @@ ActiveAdmin.register Product do
 #   permitted
 # end
 
-  permit_params :name, :product_price, :quantity, :image, :description, :category_id
+  permit_params :name, :email, :contactnumber
 
 end
