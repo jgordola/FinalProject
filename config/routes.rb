@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+
   resources :products, only: [:index, :show]
 
   get 'search', to: 'search#index', as: 'search'
+  get 'category/:id', to: 'categories#show', as: 'category'
 
   root to: 'products#index'
 

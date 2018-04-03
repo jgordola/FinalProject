@@ -1,7 +1,9 @@
-<h2><%= product.name %></h2>
+<h2><%= link_to product.name, product %></h2>
 <p>
   <strong>Image: </strong>
-  <%= image_tag(product.image, size: '250') %>
+  <%if product.image.present? %>
+  <%= image_tag product.image.thumb %>
+  <%end%>
 </p>
 <strong>Price: </strong>
 <%= product.product_price %>

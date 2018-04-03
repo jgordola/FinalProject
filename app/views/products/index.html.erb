@@ -3,8 +3,16 @@
 <%= form_tag(search_path, method: "get") do %>
   <%= label_tag(:q, "Search for:") %>
   <%= text_field_tag(:q) %>
+  <% category_select = [['All',0]] %>
+  <% category_select += @category_terms.all.map{ |u| [u.name, u.id]}%>
+  <%=select_tag "category_id",  options_for_select(category_select)%>
   <%= submit_tag("Search") %>
+
 <% end %>
+
+<% Category.all.each do |category| %>
+  <li><%= link_to category.name, category_path(category) %></li>
+  <%end%>
 
 <%= render @products %>
 <%= paginate @products %>
