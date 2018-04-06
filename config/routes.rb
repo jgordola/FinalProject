@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :abouts, only: [:show]
   resources :products, only: [:index, :show]
 
+  get 'abouts', to: 'abouts#show'
   get 'search', to: 'search#index', as: 'search'
   get 'category/:id', to: 'categories#show', as: 'category'
 

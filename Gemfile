@@ -10,7 +10,8 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'bootstrap-sass'
-
+gem 'autoprefixer-rails'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
