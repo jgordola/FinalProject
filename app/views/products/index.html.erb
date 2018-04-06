@@ -8,7 +8,6 @@
   <%=select_tag "category_id",  options_for_select(category_select)%>
   <%= submit_tag("Search") %>
 <% end %>
-
 <% Category.all.each do |category| %>
   <li><%= link_to category.name, category_path(category) %></li>
 <%end%>
