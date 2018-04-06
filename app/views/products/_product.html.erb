@@ -10,5 +10,9 @@
 <p>
   <strong>Description: </strong>
   <%= product.description %>
-
+  <%= form_tag order_items_path do %>
+    <%= hidden_field_tag :product_id, product.__id__ %>
+    <%= number_field_tag :quantity, 1 %>
+    <%= submit_tag "Add to Cart" %>
+  <% end %>
 </p>
