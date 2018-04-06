@@ -7,8 +7,7 @@ Rails.application.routes.draw do
   get 'abouts', to: 'abouts#show'
   get 'search', to: 'search#index', as: 'search'
   get 'category/:id', to: 'categories#show', as: 'category'
-
-
+  
   get '/cart', to: 'order_items#index'
   resources :order_items, path: '/cart/items'
 
