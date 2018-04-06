@@ -2,7 +2,7 @@
 <p>
   <strong>Image: </strong>
   <%if product.image.present? %>
-  <%= image_tag product.image %>
+  <%= image_tag product.image.thumb %>
   <%end%>
 </p>
 <strong>Price: </strong>
