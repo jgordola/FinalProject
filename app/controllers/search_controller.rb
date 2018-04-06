@@ -4,6 +4,6 @@ class SearchController < ApplicationController
 
     @products = Product.where('name LIKE "%' + @search_terms + '%"')
 
-    @products = Product.where('category_id = ?', "#{params[:category_id]}")
+    @products = Product.where('category_id = ?', params[:category_id])
   end
 end
