@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
   <head>
     <title>WarHub</title>
     <%= csrf_meta_tags %>
@@ -22,14 +18,15 @@
       </ul>
     </div>
   </nav>
-  <div class="container">
+
   <body>
+  <div class="container">
     <%= yield %>
+  </div>
+  </body>
   <footer>
     <div class="container text-center">
       <p>Copyright &copy; WarHub 2018</p>
     </div>
   </footer>
-  </body>
-</div>
 </html>

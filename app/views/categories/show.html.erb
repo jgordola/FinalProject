@@ -1,2 +1,5 @@
 <h1>Category results for:</h1>
+<% if flash[:message]  %>
+  <p><%= flash[:message] %></p>
+<% end %>
 <%= render @products %>
