@@ -1,17 +1,17 @@
 <h2><%= link_to product.name, product %></h2>
-<p>
+<div>
   <strong>Image: </strong>
   <%if product.image.present? %>
   <%= image_tag product.image.thumb %>
   <%end%>
-</p>
+</div>
 <strong>Price: </strong>
 <%= product.product_price %>
-<p>
+<div>
   <strong>Description: </strong>
   <%= product.description %>
   <%= form_tag order_items_path do %>
-    <%= hidden_field_tag :product_id, product.__id__ %>
+    <%= hidden_field_tag product.__id__, product.__id__ %>
     <%= submit_tag "Add to Cart" %>
   <% end %>
-</p>
+</div>
